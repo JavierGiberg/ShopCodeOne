@@ -1,10 +1,15 @@
+import { useContext } from "react";
+import { UserContext } from "../context/ProdactContex";
+
 function MyCart(props) {
-  return props.product.map((list, index) => (
-    <div key={index} className="product-card">
-      <div className="product-image">
+  const contex = useContext(UserContext);
+
+  return props.cart.map((list, index) => (
+    <div key={index} className="cart-card">
+      <div className="cart-image">
         <img src={list.image} />
       </div>
-      <div className="product-info">
+      <div className="cart-info">
         <h5>{list.title}</h5>
         <h6>{list.price}</h6>
       </div>

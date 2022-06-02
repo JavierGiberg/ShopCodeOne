@@ -1,14 +1,29 @@
+import { Link } from "react-router-dom";
+import "./header.css";
 function Header(props) {
   return (
     <nav className="product-filter">
       <h1>goCode shop</h1>
-      <label className="cart">
-        <img
-          width="30px"
-          height="30px"
-          src="https://png.pngitem.com/pimgs/s/364-3641544_transparent-carrinho-de-compras-png-blue-shopping-cart.png"
-        />
-      </label>
+      <Link to="/cart">
+        <label>
+          <img
+            className="cart"
+            width="30px"
+            height="30px"
+            src="https://png.pngitem.com/pimgs/s/364-3641544_transparent-carrinho-de-compras-png-blue-shopping-cart.png"
+          />
+        </label>
+      </Link>
+      <Link to="/">
+        <label>
+          <img
+            className="cart"
+            width="30px"
+            height="30px"
+            src="https://png.pngitem.com/pimgs/s/364-3641544_transparent-carrinho-de-compras-png-blue-shopping-cart.png"
+          />
+        </label>
+      </Link>
       <div className="sort">
         <div className="collection-sort">
           <label>Filter by:</label>
